@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magdalena Alonso · Diseñadora UX/UI</title>
+  <meta name="description" content="Magdalena Alonso, diseñadora UX/UI y arquitecta. Diseño productos digitales de punta a punta: relevamiento, investigación, interfaces accesibles y maquetación.">
+  <meta name="author" content="Magdalena Alonso">
+  <meta name="theme-color" content="#FAFAF7">
+  <link rel="canonical" href="https://magui-alonso.github.io/portfolio/">
+  <meta property="og:url" content="https://magui-alonso.github.io/portfolio/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Magdalena Alonso · Diseñadora UX/UI">
+  <meta property="og:description" content="Diseño con sentido. Productos digitales de punta a punta.">
+  <meta property="og:locale" content="es_AR">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111'/%3E%3Crect x='14' y='14' width='18' height='18' fill='%23F2E21F'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Magdalena Alonso",
+    "jobTitle": "Diseñadora UX/UI",
+    "worksFor": { "@type": "Organization", "name": "Raona" },
+    "alumniOf": "Universidad de Mendoza",
+    "address": { "@type": "PostalAddress", "addressCountry": "AR" },
+    "sameAs": ["https://www.linkedin.com/in/magdalenaalonso/"]
+  }
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<header class="header">
+  <a class="brand" href="#inicio" aria-label="Magdalena Alonso, inicio">M—A</a>
+  <nav class="nav" id="nav" aria-label="Secciones">
+    <ul>
+      <li><a href="#enfoque">Enfoque</a></li>
+      <li><a href="#casos">Casos</a></li>
+      <li><a href="#otros">Otros proyectos</a></li>
+      <li><a href="#trayectoria">Trayectoria</a></li>
+      <li><a href="#hablemos">Hablemos</a></li>
+    </ul>
+  </nav>
+  <button class="menu-btn" id="menuOpen" type="button" aria-expanded="false" aria-controls="overlay">Menú</button>
+</header>
+
+<div class="overlay" id="overlay" aria-hidden="true">
+  <button type="button" id="menuClose">Cerrar</button>
+  <a href="#enfoque">Enfoque</a>
+  <a href="#casos">Casos</a>
+  <a href="#otros">Otros proyectos</a>
+  <a href="#trayectoria">Trayectoria</a>
+  <a href="#hablemos">Hablemos</a>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio" aria-labelledby="t-hero">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <span class="scroll-hint" aria-hidden="true">Scroll</span>
+  <p class="hero__name"><span class="line"><span>Magdalena Alonso</span></span></p>
+  <h1 id="t-hero" class="display hero__title">
+    <span class="line"><span>Diseño</span></span>
+    <span class="line"><span>con <span class="hl">sentido.<span class="block" aria-hidden="true"></span></span></span></span>
+  </h1>
+  <div class="hero__foot reveal">
+    <span class="kicker">Diseñadora UX/UI<br>Arquitecta · Argentina</span>
+    <p class="small">Diseño productos digitales de punta a punta, desde el relevamiento de necesidades con las áreas de negocio hasta la definición de interfaces. Actualmente formo parte de <strong>Raona</strong>, asignada a un proyecto para una empresa líder del sector energético.</p>
+    <div class="links">
+      <a class="link" href="#casos">Ver casos →</a>
+      <a class="link" href="https://www.linkedin.com/in/magdalenaalonso/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- Cinta cinética: se acelera y cambia de sentido con el scroll -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marquee">
+    <span>Relevamiento <i style="background:var(--yellow)"></i></span>
+    <span class="o">UX/UI <i style="background:var(--green)"></i></span>
+    <span>Accesibilidad <i style="background:var(--pink)"></i></span>
+    <span class="o">Design systems <i style="background:var(--blue)"></i></span>
+    <span>Maquetación <i style="background:var(--red)"></i></span>
+    <span class="o">Research <i style="background:var(--yellow)"></i></span>
+  </div>
+</div>
+
+<!-- ============ 02 ENFOQUE: scroll horizontal ============ -->
+<section id="enfoque" aria-labelledby="t-enfoque">
+  <div class="hscroll" id="hscroll">
+    <div class="hscroll__pin">
+      <div class="hscroll__track" id="htrack">
+        <div class="panel panel--intro">
+          <div>
+            <span class="kicker">02 — Cómo trabajo</span>
+            <h2 id="t-enfoque" class="display" style="margin-top:14px">Enfoque</h2>
+            <p class="small">Entender antes de diseñar. Experiencia en entornos complejos, con múltiples roles, reglas de negocio y flujos de aprobación. Trabajo conjunto con negocio y desarrollo para reducir la incertidumbre y transformar necesidades en decisiones de diseño claras, fundamentadas y viables.</p>
+          </div>
+        </div>
+        <article class="panel">
+          <span class="block" style="background:var(--green)" aria-hidden="true"></span>
+          <span class="panel__num">01</span>
+          <div class="panel__body">
+            <h3>Relevamiento e investigación</h3>
+            <p class="small">Entrevistas con usuarios y áreas de negocio, y análisis de procesos y requerimientos.</p>
+            <p class="tags"><span>Entrevistas</span><span>Requerimientos</span><span>Heurísticas</span></p>
+          </div>
+        </article>
+        <article class="panel">
+          <span class="block" style="background:var(--pink)" aria-hidden="true"></span>
+          <span class="panel__num">02</span>
+          <div class="panel__body">
+            <h3>Arquitectura y flujos</h3>
+            <p class="small">Organización de la información y definición de recorridos. Wireframes y prototipos para validar antes del desarrollo.</p>
+            <p class="tags"><span>User flows</span><span>Wireframes</span><span>Prototipos</span></p>
+          </div>
+        </article>
+        <article class="panel">
+          <span class="block" style="background:var(--blue)" aria-hidden="true"></span>
+          <span class="panel__num">03</span>
+          <div class="panel__body">
+            <h3>Interfaz y design system</h3>
+            <p class="small">Diseño de interfaces consistentes y accesibles, basadas en componentes reutilizables.</p>
+            <p class="tags"><span>Figma</span><span>Componentes</span><span>WCAG</span></p>
+          </div>
+        </article>
+        <article class="panel">
+          <span class="block" style="background:var(--yellow)" aria-hidden="true"></span>
+          <span class="panel__num">04</span>
+          <div class="panel__body">
+            <h3>Maquetación y mejora</h3>
+            <p class="small">Maquetación en HTML, CSS y JS, pruebas de usabilidad e iteración continua a partir del feedback.</p>
+            <p class="tags"><span>HTML/CSS/JS</span><span>Testing</span><span>Iteración</span></p>
+          </div>
+        </article>
+      </div>
+      <div class="hscroll__bar" aria-hidden="true"><i id="hbar"></i></div>
+    </div>
+  </div>
+  <div class="tools reveal">
+    <span class="kicker">Herramientas</span>
+    <p class="small">Figma · Adobe XD · Illustrator · Photoshop · Lighthouse · axe DevTools · HTML5 · CSS · JavaScript · Bootstrap · Trello · Notion · IA aplicada al proceso de diseño</p>
+  </div>
+</section>
+
+<!-- ============ 03 CASOS: tarjetas que se apilan ============ -->
+<section class="sec" id="casos" aria-labelledby="t-casos">
+  <div class="sec__head">
+    <div class="title">
+      <span class="kicker">03 — Proyectos seleccionados</span>
+      <h2 id="t-casos" class="display"><span class="line"><span>Casos</span></span></h2>
+    </div>
+    <p class="text small reveal">Proyectos desarrollados desde Raona para una empresa líder del sector energético, enfocados en mejorar la experiencia de usuario y la evolución de sus productos digitales.</p>
+  </div>
+
+  <!-- Para completar un caso: reemplazá los [corchetes] y quitá la clase "todo".
+       Cuando exista la página de detalle, envolvé el título en <a href="casos/...">. -->
+  <div class="stack">
+    <article class="card" style="--i:0" aria-labelledby="c1">
+      <div class="card__media" aria-hidden="true">
+        <span class="block bg-col bg-1" style="background:var(--pink)" aria-hidden="true"></span>
+<div class="pc" aria-hidden="true">
+  <div class="pc__win">
+    <div class="pc__bar"><span class="pc__dots"><i></i><i></i><i></i></span><span class="pc__url"><i class="sk" style="width:70px"></i></span></div>
+    <div class="pc__body">
+      <div class="pc__nav"><b class="pc__logo"></b><span><i></i><i></i><i></i><i></i><i></i></span></div>
+      <span class="pc__chip"><i class="sk" style="width:34px"></i></span>
+      <p class="pc__title"><i class="sk sk--h" style="width:62%"></i></p>
+      <i class="pc__line" style="width:58%"></i>
+      <div class="pc__hero"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m3 18 6-5 4 3 3-2 5 4"/></svg></div>
+      <div class="pc__cards"><div><i class="pc__ico"></i><b></b><i></i></div><div><i class="pc__ico"></i><b></b><i></i></div><div><i class="pc__ico"></i><b></b><i></i></div></div>
+    </div>
+  </div>
+  <div class="pc__comp">
+    <span class="pc__tag"><i class="sk" style="width:46px"></i></span>
+    <div class="pc__comp-img"></div>
+    <b></b><i></i><i style="width:60%"></i>
+    <span class="pc__btn"><i class="sk" style="width:22px"></i></span>
+  </div>
+  <div class="pc__a11y">
+    <p class="pc__a11y-t">Accesibilidad</p>
+    <p><span class="ok">✓</span>Contraste AA</p>
+    <p><span class="ok">✓</span>Texto alternativo</p>
+    <p><span class="ok">✓</span>Navegación con teclado</p>
+  </div>
+</div>
+      </div>
+      <div class="card__body">
+        <div class="card__top"><span class="card__n">01</span><span class="kicker">Portales web · Sector energético</span></div>
+        <h3 id="c1">Portales corporativos</h3>
+        <div class="card__facts">
+          <div><h4>Desafío</h4><p class="small">Un ecosistema de portales públicos que tiene que mantenerse vigente: páginas que se rediseñan, contenidos que cambian y nuevas necesidades de distintas áreas. Todo dentro de un design system corporativo y con estándares de accesibilidad.</p></div>
+          <div><h4>Solución</h4><p class="small">Relevamiento con las áreas solicitantes, rediseño de páginas siguiendo el design system de la empresa, armado en la herramienta de gestión de sitios y testeo de diseño y accesibilidad antes de cada salida a producción.</p></div>
+        </div>
+        <div class="card__results"><div><strong class="res">+10</strong><span class="small">portales mantenidos y actualizados con un mismo lenguaje visual</span></div><div><strong class="res">WCAG</strong><span class="small">revisión de accesibilidad en cada publicación</span></div></div>
+      </div>
+    </article>
+
+    <article class="card" style="--i:1" aria-labelledby="c2">
+      <div class="card__media" aria-hidden="true">
+        <span class="block bg-col bg-2" style="background:var(--blue)" aria-hidden="true"></span>
+<div class="pc pc--ev" aria-hidden="true">
+  <div class="pc__win">
+    <div class="pc__bar"><span class="pc__dots"><i></i><i></i><i></i></span><span class="pc__url"><i class="sk" style="width:70px"></i></span></div>
+    <div class="ev__app">
+      <div class="ev__head"><b class="pc__logo"></b><span class="ev__name"><i class="sk sk--h" style="width:90px"></i></span><span class="ev__cta"><i class="sk" style="width:34px"></i></span></div>
+      <div class="ev__search"><i class="sk" style="width:55%"></i></div>
+      <div class="ev__filters"><span><i class="sk" style="width:60%"></i></span><span><i class="sk" style="width:60%"></i></span><span><i class="sk" style="width:60%"></i></span><span><i class="sk" style="width:60%"></i></span></div>
+      <p class="ev__title"><i class="sk sk--h" style="width:28%"></i></p>
+      <div class="ev__days"><span class="on"><i class="sk" style="width:14px"></i></span><span><i class="sk" style="width:14px"></i></span><span><i class="sk" style="width:14px"></i></span><span><i class="sk" style="width:14px"></i></span></div>
+      <div class="ev__grid"><div class="ev"><div class="ev__top"><span class="ev__date"><i class="sk" style="width:14px"></i></span><span class="ev__act"><i></i><i></i></span></div><div class="ev__img"></div><span class="ev__tags"><em><i class="sk" style="width:16px"></i></em><em class="g"><i class="sk" style="width:16px"></i></em></span><b><i class="sk sk--h" style="width:80%"></i></b><i></i><i style="width:70%"></i></div><div class="ev"><div class="ev__top"><span class="ev__date"><i class="sk" style="width:14px"></i></span><span class="ev__act"><i></i><i></i></span></div><div class="ev__img"></div><span class="ev__tags"><em><i class="sk" style="width:16px"></i></em><em class="g"><i class="sk" style="width:16px"></i></em></span><b><i class="sk sk--h" style="width:80%"></i></b><i></i><i style="width:70%"></i></div><div class="ev"><div class="ev__top"><span class="ev__date"><i class="sk" style="width:14px"></i></span><span class="ev__act"><i></i><i></i></span></div><div class="ev__img"></div><span class="ev__tags"><em><i class="sk" style="width:16px"></i></em><em class="g"><i class="sk" style="width:16px"></i></em></span><b><i class="sk sk--h" style="width:80%"></i></b><i></i><i style="width:70%"></i></div></div>
+    </div>
+  </div>
+  <div class="ev__phone">
+    <div class="ev__screen">
+      <p class="ev__ft"><i class="sk sk--h" style="width:50%"></i></p>
+      <span class="ev__lbl"><i class="sk" style="width:40%"></i></span><span class="ev__in ev__in--sel"><i class="sk" style="width:45%"></i></span>
+      <span class="ev__lbl"><i class="sk" style="width:40%"></i></span><span class="ev__in ev__in--tall"></span>
+      <span class="ev__lbl"><i class="sk" style="width:40%"></i></span>
+      <span class="ev__chk"><i class="on"></i><i class="sk" style="width:8px"></i> <i></i><i class="sk" style="width:8px"></i> <i></i><i class="sk" style="width:8px"></i></span>
+      <span class="ev__btn"><i class="sk" style="width:40%"></i></span>
+    </div>
+  </div>
+</div>
+      </div>
+      <div class="card__body">
+        <div class="card__top"><span class="card__n">02</span><span class="kicker">CMS · Sector energético</span></div>
+        <h3 id="c2">Gestor de eventos</h3>
+        <div class="card__facts">
+          <div><h4>Desafío</h4><p class="small">El área de comunicación cargaba los eventos del calendario corporativo desde listas de gestión documental, un proceso confuso y poco amigable para quienes lo usaban a diario. Hacía falta una herramienta propia que simplificara la carga y el mantenimiento de los eventos.</p></div>
+          <div><h4>Solución</h4><p class="small">Relevamiento con el área de comunicación, definición de los flujos de carga y edición, diseño de la interfaz web y mobile, y trabajo junto a desarrollo para asegurar que el diseño se ajustara a la implementación.</p></div>
+        </div>
+        <div class="card__results"><div><strong class="res">Web + mobile</strong><span class="small">un mismo gestor diseñado para ambos dispositivos</span></div><div><strong class="res">En uso</strong><span class="small">carga de eventos más rápida y amigable, según el área</span></div></div>
+      </div>
+    </article>
+
+    <article class="card" style="--i:2" aria-labelledby="c3">
+      <div class="card__media" aria-hidden="true">
+        <span class="block bg-col bg-3" style="background:var(--red)" aria-hidden="true"></span>
+        <div class="pc pc--ds" aria-hidden="true">
+  <div class="ds__board">
+    <div class="ds__tool"><span class="pc__dots"><i></i><i></i><i></i></span><span class="ds__tic"><i></i><i></i><i></i><i></i></span><b class="pc__logo"></b></div>
+    <div class="ds__grid">
+      <section class="ds__sec">
+        <p class="ds__lab"><i class="sk sk--h" style="width:34%"></i></p>
+        <div class="ds__dots"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="ds__dots ds__dots--2"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <p class="ds__lab"><i class="sk sk--h" style="width:42%"></i></p>
+        <div class="ds__ts"><em></em><i style="width:70%;height:10px"></i><em></em><i style="width:56%;height:7px"></i><em></em><i style="width:44%;height:5px"></i><em></em><i style="width:80%;height:3px"></i></div>
+        <p class="ds__lab"><i class="sk sk--h" style="width:38%"></i></p>
+        <div class="ds__sp"><span style="width:6px"></span><span style="width:10px"></span><span style="width:16px"></span><span style="width:24px"></span><span style="width:34px"></span></div>
+      </section>
+      <section class="ds__sec">
+        <p class="ds__lab"><i class="sk sk--h" style="width:48%"></i></p>
+        <div class="ds__set"><span class="ds__b ds__b--fill"><i class="sk" style="width:22px"></i></span><span class="ds__b"><i class="sk" style="width:22px"></i></span><span class="ds__b ds__b--ghost"><i class="sk" style="width:22px"></i></span></div>
+        <div class="ds__set"><span class="ds__tog on"><i></i></span><span class="ds__tog"><i></i></span><span class="ds__chk on"></span><span class="ds__chk"></span><span class="ds__rad on"></span><span class="ds__rad"></span></div>
+        <div class="ds__set ds__set--col"><span class="ds__in"><i class="sk" style="width:50%"></i></span><span class="ds__in ds__in--sel"><i class="sk" style="width:40%"></i><svg viewBox="0 0 10 6" width="8" height="5"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span></div>
+        <p class="ds__lab"><i class="sk sk--h" style="width:30%"></i></p>
+        <div class="ds__ico"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3v10"/></svg><svg viewBox="0 0 16 16"><path d="M2.5 8.5l3.5 3.5 7.5-8"/></svg><svg viewBox="0 0 16 16"><rect x="2.5" y="3.5" width="11" height="10" rx="1.5"/><path d="M2.5 6.5h11"/></svg><svg viewBox="0 0 16 16"><path d="M8 13.5S2.5 10 2.5 6a3 3 0 0 1 5.5-1.6A3 3 0 0 1 13.5 6c0 4-5.5 7.5-5.5 7.5z"/></svg><svg viewBox="0 0 16 16"><path d="M3 4.5h10M3 8h10M3 11.5h10"/></svg></div>
+      </section>
+    </div>
+  </div>
+  <div class="ds__desk fd">
+    <div class="pc__bar"><span class="pc__dots"><i></i><i></i><i></i></span><span class="pc__url"><i class="sk" style="width:50px"></i></span></div>
+    <div class="fd__page">
+      <div class="fd__head fd__head--d"><span class="fd__logo"><i></i><b></b></span><span class="fd__div"></span><span class="fd__nav"><i></i><i></i><i></i><i></i></span></div>
+      <div class="fd__hero">
+        <div class="fd__copy"><span class="fd__chip"><i class="sk" style="width:16px"></i></span><i class="fd__t"></i><i></i><i style="width:80%"></i><i style="width:60%"></i></div>
+        <div class="fd__img"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m3 18 6-5 4 3 3-2 5 4"/></svg></div>
+        <span class="fd__band"><i class="sk" style="width:26px"></i><svg viewBox="0 0 12 12" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l6-6M4 3h5v5"/></svg></span>
+        <span class="fd__pager"><i class="on"></i><i></i><i></i><i></i></span>
+      </div>
+      <div class="fd__about"><div><i class="fd__t" style="width:46%"></i><i></i><i style="width:85%"></i></div><span class="fd__caps"><i></i><i></i></span></div>
+    </div>
+  </div>
+  <div class="ds__mob"><div class="ds__ms fd fd--m"><div class="fd__head"><span class="fd__logo"><i></i><b></b></span><span class="fd__bur"><i></i><i></i><i></i></span></div><span class="fd__chip"><i class="sk" style="width:14px"></i></span><i class="fd__t"></i><i></i><i style="width:70%"></i><div class="fd__img fd__img--m"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m3 18 6-5 4 3 3-2 5 4"/></svg></div><span class="fd__band fd__band--m"><i class="sk" style="width:20px"></i><svg viewBox="0 0 12 12" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l6-6M4 3h5v5"/></svg></span><div class="fd__card"><span class="fd__lbl"><i class="sk" style="width:40%"></i><svg viewBox="0 0 12 12" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l6-6M4 3h5v5"/></svg></span></div></div></div>
+  <div class="pc__a11y ds__val">
+    <p class="pc__a11y-t">Validación</p>
+    <p><span class="ok">✓</span>Pruebas de diseño</p>
+    <p><span class="ok">✓</span>Accesibilidad</p>
+    <p><span class="ok">✓</span>Revisión con QA</p>
+  </div>
+</div>
+      </div>
+      <div class="card__body">
+        <div class="card__top"><span class="card__n">03</span><span class="kicker">Design system · Sector energético</span></div>
+        <h3 id="c3">Fundación corporativa</h3>
+        <div class="card__facts">
+          <div><h4>Desafío</h4><p class="small">Un sitio institucional compuesto por muchos portales internos, cada uno con su propia lógica visual y de navegación. Sin un sistema común: el único punto de partida era el manual de marca.</p></div>
+          <div><h4>Solución</h4><p class="small">Creación de un design system end-to-end para todo el sitio y sus portales internos, a partir del manual de marca. Prototipos desktop y mobile de cada portal, pruebas de diseño y accesibilidad, y trabajo codo a codo con desarrollo y QA, con ajustes de diseño a partir de las reuniones con usuarios.</p></div>
+        </div>
+        <div class="card__results"><div><strong class="res">1 sistema</strong><span class="small">un mismo lenguaje visual y de uso para todos los portales</span></div><div><strong class="res">Escalable</strong><span class="small">pensado para crecer y mantenerse en el tiempo</span></div></div>
+      </div>
+    </article>
+
+    <article class="card" style="--i:3" aria-labelledby="c4">
+      <div class="card__media" aria-hidden="true">
+        <span class="block bg-col bg-4" style="background:var(--yellow)" aria-hidden="true"></span>
+        <div class="pc pc--gc" aria-hidden="true">
+  <div class="pc__win gc__win">
+    <div class="pc__bar"><span class="pc__dots"><i></i><i></i><i></i></span><span class="pc__url"><i class="sk" style="width:70px"></i></span></div>
+    <div class="gc__app">
+      <nav class="gc__rail"><b class="pc__logo"></b><i class="on"></i><i></i><i></i><i></i><span class="gc__av"></span></nav>
+      <div class="gc__main">
+        <div class="gc__top"><p class="gc__h"><i class="sk sk--h" style="width:38%"></i></p><span class="gc__cta"><i class="sk" style="width:26px"></i></span></div>
+        <div class="gc__kpis"><div><i class="sk" style="width:50%"></i><b></b></div><div><i class="sk" style="width:40%"></i><b></b></div><div class="is-late"><i class="sk" style="width:45%"></i><b></b></div></div>
+        <div class="gc__tools"><span class="gc__search"><i class="sk" style="width:40%"></i></span><span class="gc__f"><i class="sk" style="width:60%"></i></span><span class="gc__f"><i class="sk" style="width:50%"></i></span></div>
+        <div class="gc__list"><div class="gc__row is-sel"><span class="gc__chk"></span><div class="gc__rt"><i class="sk sk--h" style="width:62%"></i><span class="gc__bar"><i style="width:72%"></i></span></div><span class="gc__pill"><i class="sk" style="width:18px"></i></span></div><div class="gc__row"><span class="gc__chk"></span><div class="gc__rt"><i class="sk sk--h" style="width:48%"></i><span class="gc__bar"><i style="width:30%"></i></span></div><span class="gc__pill gc__pill--late"><i class="sk" style="width:18px"></i></span></div><div class="gc__row"><span class="gc__chk"></span><div class="gc__rt"><i class="sk sk--h" style="width:56%"></i><span class="gc__bar"><i style="width:55%"></i></span></div><span class="gc__pill"><i class="sk" style="width:18px"></i></span></div><div class="gc__row"><span class="gc__chk"></span><div class="gc__rt"><i class="sk sk--h" style="width:40%"></i><span class="gc__bar"><i style="width:90%"></i></span></div><span class="gc__pill"><i class="sk" style="width:18px"></i></span></div><div class="gc__row"><span class="gc__chk"></span><div class="gc__rt"><i class="sk sk--h" style="width:52%"></i><span class="gc__bar"><i style="width:15%"></i></span></div><span class="gc__pill gc__pill--late"><i class="sk" style="width:18px"></i></span></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="gc__drawer">
+    <div class="gc__dh"><i class="sk sk--h" style="width:55%"></i><span class="gc__x"></span></div>
+    <span class="gc__pill"><i class="sk" style="width:18px"></i></span>
+    <span class="gc__lbl"><i class="sk" style="width:30%"></i></span><span class="gc__in"><i class="sk" style="width:60%"></i></span>
+    <span class="gc__lbl"><i class="sk" style="width:36%"></i></span><span class="gc__in gc__in--sel"><i class="sk" style="width:40%"></i><svg viewBox="0 0 10 6" width="8" height="5"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span>
+    <span class="gc__lbl"><i class="sk" style="width:26%"></i></span>
+    <div class="gc__acts"><span><i class="on"></i><i class="sk" style="width:70%"></i></span><span><i class="on"></i><i class="sk" style="width:55%"></i></span><span><i></i><i class="sk" style="width:62%"></i></span></div>
+    <span class="gc__save"><i class="sk" style="width:30%"></i></span>
+  </div>
+  <div class="gc__mob"><div class="gc__ms"><p class="gc__mh"><i class="sk sk--h" style="width:50%"></i></p><div class="gc__mk"><span></span><span></span></div><div class="gc__mrow"><i class="sk sk--h" style="width:70%"></i><span class="gc__bar"><i style="width:60%"></i></span></div><div class="gc__mrow is-late"><i class="sk sk--h" style="width:55%"></i><span class="gc__bar"><i style="width:25%"></i></span></div><div class="gc__mrow"><i class="sk sk--h" style="width:64%"></i><span class="gc__bar"><i style="width:80%"></i></span></div><nav class="gc__tab"><i class="on"></i><i></i><i></i><i></i></nav></div></div>
+  <div class="pc__a11y gc__proc">
+    <p class="pc__a11y-t">Proceso con IA</p>
+    <p><span class="ok">✓</span>Análisis del documento funcional</p>
+    <p><span class="ok">✓</span>Prototipo navegable</p>
+    <p><span class="ok">✓</span>Accesibilidad WCAG 2.2 AA</p>
+    <p><span class="ok">✓</span>Design system y desarrollo</p>
+  </div>
+</div>
+      </div>
+      <div class="card__body">
+        <div class="card__top"><span class="card__n">04</span><span class="kicker">Dashboard · Sector energético</span></div>
+        <h3 id="c4">Espacio de gestión cultural</h3>
+        <div class="card__facts">
+          <div><h4>Desafío</h4><p class="small">El área de Personas y Cultura necesitaba un tablero de control para seguir sus iniciativas culturales: demandas, acciones y actividades, con una lectura rápida del estado general.</p></div>
+          <div><h4>Solución</h4><p class="small">Análisis del documento funcional, arquitectura de información, prototipado y accesibilidad. La solución no quedó en el prototipo: se maquetó con componentes de Vue para agilizar la implementación de los desarrolladores. Todo trabajado en conjunto con IA, con las decisiones de diseño del lado del equipo.</p></div>
+        </div>
+        <div class="card__results"><div><strong class="res">Diseño + IA</strong><span class="small">un proceso más ágil, con la IA acompañando del análisis a la implementación</span></div><div><strong class="res">WCAG 2.2</strong><span class="small">nivel AA, sin errores en la auditoría automática</span></div></div>
+      </div>
+    </article>
+  </div>
+  <p class="cases-note">Las imágenes de los casos son ilustraciones genéricas: no reproducen pantallas, nombres ni datos reales.</p>
+</section>
+
+<!-- ============ 04 OTROS PROYECTOS ============ -->
+<section class="sec" id="otros" aria-labelledby="t-otros" style="padding-top:0">
+  <div class="sec__head">
+    <div class="title">
+      <span class="kicker">04 — Freelance y otros</span>
+      <h2 id="t-otros" class="display"><span class="line"><span>Otros</span></span><span class="line"><span>proyectos</span></span></h2>
+    </div>
+    <p class="text small reveal">Sitios web, interfaces e identidad visual para profesionales y marcas personales, diseñados y desarrollados de punta a punta.</p>
+  </div>
+  <div class="list">
+    <a class="item" href="https://www.magdaenciso.life/" data-desktop="magda-enciso-desktop.jpg" data-mobile="magda-enciso-mobile.jpg" target="_blank" rel="noopener" style="--c:var(--green)" data-color="var(--green)">
+      <span class="item__n">01</span><span class="item__name">Magda Enciso</span><span class="item__type">Sitio web · Diseño y desarrollo</span><span class="item__arrow" aria-hidden="true">↗</span>
+    </a>
+    <a class="item" href="https://magui-alonso.github.io/pagina-flor/index.html" data-desktop="la-psico-exploradora-desktop.jpg" data-mobile="la-psico-exploradora-mobile.jpg" target="_blank" rel="noopener" style="--c:var(--red)" data-color="var(--red)">
+      <span class="item__n">02</span><span class="item__name">La Psico Exploradora</span><span class="item__type">Sitio web · Diseño y desarrollo</span><span class="item__arrow" aria-hidden="true">↗</span>
+    </a>
+    <a class="item" href="https://caromontalto.com/" data-desktop="caro-montalto-desktop.jpg" data-mobile="caro-montalto-mobile.jpg" target="_blank" rel="noopener" style="--c:var(--yellow)" data-color="var(--yellow)">
+      <span class="item__n">03</span><span class="item__name">Caro Montalto</span><span class="item__type">Sitio web · Diseño y desarrollo</span><span class="item__arrow" aria-hidden="true">↗</span>
+    </a>
+  </div>
+  <p class="preview-note">Pasá el mouse por cada proyecto para ver una vista previa del sitio.</p>
+  <!-- Vista previa flotante (desktop + mobile). Para usar capturas reales, reemplazá los .scr por <img>. -->
+  <div class="preview" id="preview" aria-hidden="true">
+    <div class="mk-laptop"><div class="mk-laptop__lid"><div class="mk-screen"><img id="pvDesk" alt=""></div></div><div class="mk-laptop__base"></div></div>
+    <div class="mk-phone"><div class="mk-screen"><img id="pvMob" alt=""></div></div>
+  </div>
+</section>
+
+<!-- ============ 05 TRAYECTORIA ============ -->
+<section class="sec" id="trayectoria" aria-labelledby="t-tray" style="padding-top:0">
+  <div class="tray-open">
+    <div class="title">
+      <span class="kicker" style="display:block;margin-bottom:16px">05 — Trayectoria</span>
+      <h2 id="t-tray" class="display"><span class="line"><span>De la arquitectura</span></span><span class="line"><span>al <span class="hl">producto<span class="block" aria-hidden="true"></span></span> digital.</span></span></h2>
+    </div>
+    <div class="text">
+      <p class="fill" id="fill">Me formé como arquitecta y hace seis años me dedico al diseño digital. Cambió el entorno, pero no mi forma de trabajar: comprender a las personas, identificar sus necesidades y diseñar experiencias que tengan sentido.</p>
+      <p class="small reveal">Trabajo en conjunto con equipos de negocio y desarrollo, incorporo la accesibilidad desde el inicio y utilizo herramientas de inteligencia artificial para enriquecer el proceso de diseño.</p>
+      <dl class="figs reveal">
+        <div><dt data-count="11">11</dt><dd>años de experiencia</dd></div>
+        <div><dt data-count="6" data-pad="2">06</dt><dd>en diseño digital</dd></div>
+        <div><dt>EN</dt><dd>inglés avanzado</dd></div>
+      </dl>
+      <a class="link cv-link" href="Magdalena-Alonso-CV.pdf" download="Magdalena-Alonso-CV.pdf" type="application/pdf">Descargar CV ↓</a>
+    </div>
+  </div>
+
+  <div class="xp">
+    <h3 class="label">Experiencia</h3>
+    <ol>
+      <li class="xp-row reveal">
+        <span class="xp-row__when">2022 — Hoy<i aria-label="Actual"></i></span>
+        <div class="xp-row__role"><h4>Diseñadora UX/UI</h4><p>Raona</p></div>
+        <div class="xp-row__desc">
+          <p class="small">Asignada a un proyecto para una empresa líder del sector energético, participo en el diseño y evolución de productos digitales, trabajando en conjunto con las áreas de negocio para relevar necesidades, analizar requerimientos y transformarlos en soluciones centradas en las personas.</p>
+          <p class="small">Llevo adelante el proceso de diseño UX/UI de punta a punta, desde la investigación y definición de flujos hasta la creación de wireframes y prototipos. Diseño interfaces accesibles siguiendo las pautas WCAG y participo en su implementación mediante HTML5, CSS y JavaScript. Además, realizo pruebas con usuarios y analizo datos y feedback para identificar oportunidades de mejora y optimizar continuamente la experiencia.</p>
+        </div>
+      </li>
+      <li class="xp-row reveal">
+        <span class="xp-row__when">2020 — 2024</span>
+        <div class="xp-row__role"><h4>Diseñadora UX/UI</h4><p>Freelance</p></div>
+        <div class="xp-row__desc"><p class="small">Diseño y desarrollo de sitios web, interfaces para aplicaciones web y mobile, sistemas de identidad visual y manuales de marca.</p></div>
+      </li>
+      <li class="xp-row reveal">
+        <span class="xp-row__when">2020 — 2022</span>
+        <div class="xp-row__role"><h4>Tutora de Desarrollo Web y UX/UI</h4><p>Coderhouse</p></div>
+        <div class="xp-row__desc"><p class="small">Acompañamiento a estudiantes, soporte al docente, coordinación de salas de trabajo y corrección de proyectos.</p></div>
+      </li>
+      <li class="xp-row reveal">
+        <span class="xp-row__when">2013 — 2020</span>
+        <div class="xp-row__role"><h4>Arquitecta</h4><p>Estudios de arquitectura · Empresas constructoras · Independiente</p></div>
+        <div class="xp-row__desc"><p class="small">Trabajé en estudios de arquitectura, empresas constructoras y de manera independiente. Una base que hoy se traduce en una mirada centrada en las personas, el orden y la colaboración entre disciplinas.</p></div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="foot">
+    <div class="reveal">
+      <h3 class="label">Formación</h3>
+      <ul class="tlist">
+        <li><span>Arquitecta</span><span>Universidad de Mendoza · 2007 — 2013</span></li>
+        <li><span>Carrera de Diseño UX/UI</span><span>Coderhouse</span></li>
+        <li><span>Carrera de Desarrollo Front End</span><span>Coderhouse</span></li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <h3 class="label">Certificaciones</h3>
+      <ul class="tlist">
+        <li><span>AI for Designers</span><span>IxDF</span></li>
+        <li><span>Accessibility: How to Design for All</span><span>IxDF</span></li>
+        <li><span>Agile Methods for UX Design</span><span>IxDF</span></li>
+        <li><span>Design for Thought and Emotion</span><span>IxDF</span></li>
+        <li><span>Conscious Business Coaching Plus</span><span>Conscious Business Center</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 HABLEMOS ============ -->
+<section class="talk" id="hablemos" aria-labelledby="t-talk">
+  <span class="kicker">06 — Contacto</span>
+  <h2 id="t-talk" class="display talk__title" aria-label="Hablemos.">
+    <span>H</span><span>a</span><span>b</span><span>l</span><span>e</span><span>m</span><span>o</span><span>s</span><span>.</span>
+  </h2>
+  <div class="talk__grid">
+    <div class="talk__mail">
+      <a class="mail" id="email" href="mailto:magui.alonso.g@gmail.com">magui.alonso.g@gmail.com</a>
+      <div class="actions">
+        <span class="magnetic"><button class="btn-text" id="copyBtn" type="button">Copiar email</button></span>
+        <span class="magnetic"><a class="link" href="https://www.linkedin.com/in/magdalenaalonso/" target="_blank" rel="noopener">LinkedIn ↗</a></span>
+      </div>
+      <p class="status" id="copyStatus" role="status" aria-live="polite"></p>
+    </div>
+    <form class="talk__form" id="contactForm" novalidate>
+      <label for="f-name">Nombre<input id="f-name" name="name" type="text" autocomplete="name" required></label>
+      <label for="f-msg">Mensaje<textarea id="f-msg" name="message" rows="3" required></textarea></label>
+      <p class="form-error" id="formError" role="alert"></p>
+      <span class="magnetic"><button class="btn-text" type="submit">Preparar email →</button></span>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <span>© <span id="year">2026</span> Magdalena Alonso · Diseñadora UX/UI</span>
+  <span>Los proyectos se presentan de forma anónima por confidencialidad.</span>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
