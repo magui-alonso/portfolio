@@ -50,13 +50,13 @@
       <li><a href="#hablemos">Hablemos</a></li>
     </ul>
   </nav>
-  <button class="menu-btn" id="menuOpen" type="button" aria-expanded="false" aria-controls="overlay">Menú</button>
+  <button class="menu-btn" id="menuOpen" type="button" aria-expanded="false" aria-controls="overlay" aria-label="Abrir menú"><span class="burger" aria-hidden="true"><span class="burger__ln"><i></i><i></i></span><em></em></span></button>
 </header>
 
 <div class="overlay" id="overlay" aria-hidden="true" inert>
   <div class="overlay__head">
     <a class="brand" href="#inicio" aria-label="MA, Magdalena Alonso. Ir al inicio"><span class="brand__m">M</span><span class="brand__a">A</span></a>
-    <button type="button" id="menuClose">Cerrar</button>
+    <button type="button" class="menu-btn menu-btn--close" id="menuClose" aria-label="Cerrar menú"><span class="burger is-x" aria-hidden="true"><span class="burger__ln"><i></i><i></i></span><em></em></span></button>
   </div>
   <nav class="overlay__list" aria-label="Secciones">
     <a href="#enfoque"><span class="n">01</span><span class="t">Enfoque</span></a>

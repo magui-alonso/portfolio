@@ -1015,3 +1015,19 @@ a, button { -webkit-tap-highlight-color: transparent; }
 /* Enfoque (desktop): el bloque de color baja hasta la mitad del número */
 .hscroll:not(.is-carousel) .panel .block { height: auto; bottom: calc(44px + 0.39 * clamp(88px, 11vw, 170px)); }
 
+
+/* ---------- Menú hamburguesa (opción B) ---------- */
+.menu-btn { width: 44px; height: 44px; padding: 0; margin-right: -8px; align-items: center; justify-content: center; }
+@media (max-width: 860px) { .menu-btn { display: flex; } }
+.overlay .menu-btn { display: flex; }
+.burger { display: flex; align-items: center; gap: 7px; }
+.burger__ln { position: relative; width: 24px; height: 14px; }
+.burger__ln i { position: absolute; right: 0; height: 2px; background: var(--ink); border-radius: 1px; transition: transform .3s ease, width .3s ease, top .3s ease; }
+.burger__ln i:first-child { top: 3px; width: 24px; }
+.burger__ln i:last-child { top: 9px; width: 16px; }
+.burger em { width: 9px; height: 9px; background: #F4E7A1; border-radius: 1px; transition: transform .3s ease; }
+.menu-btn:hover .burger em, .menu-btn:focus-visible .burger em { transform: scale(1.25); }
+.burger.is-x .burger__ln i { top: 6px; width: 22px; right: 1px; }
+.burger.is-x .burger__ln i:first-child { transform: rotate(45deg); }
+.burger.is-x .burger__ln i:last-child { transform: rotate(-45deg); }
+@media (prefers-reduced-motion: reduce) { .burger__ln i, .burger em { transition: none; } }
