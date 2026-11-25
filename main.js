@@ -35,6 +35,7 @@
   function setMenu(open) {
     overlay.classList.toggle('is-open', open);
     overlay.setAttribute('aria-hidden', String(!open));
+    overlay.inert = !open;
     openBtn.setAttribute('aria-expanded', String(open));
     (open ? closeBtn : openBtn).focus();
   }
@@ -44,7 +45,7 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('is-open')) setMenu(false); });
 
   /* ---------- Sección activa en la navegación ---------- */
-  var navLinks = $$('.nav a');
+  var navLinks = $$('.nav a, .overlay__list a');
   if ('IntersectionObserver' in window) {
     var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
@@ -88,6 +89,18 @@
   /* ---------- Cinta cinética ---------- */
   var marquee = $('#marquee');
   marquee.innerHTML += marquee.innerHTML; // duplicado para el bucle
+  // Pausa: un clic/tap o Enter/Espacio la detiene y la reanuda; con foco de teclado también se detiene
+  var mBox = $('#marqueeBox'), mBtn = $('#marqueeBtn'), mPaused = false, mFocus = false;
+  function setPaused(v) {
+    mPaused = v; mBtn.setAttribute('aria-pressed', String(v));
+    mBtn.innerHTML = '<span aria-hidden="true">' + (v ? '▶' : '❚❚') + '</span>';
+    mBox.classList.toggle('is-paused', v);
+  }
+  setPaused(false);
+  mBox.addEventListener('click', function (e) { if (e.target !== mBtn) setPaused(!mPaused); });
+  mBtn.addEventListener('click', function () { setPaused(!mPaused); });
+  mBtn.addEventListener('focus', function () { mFocus = true; mBox.classList.add('is-focus'); });
+  mBtn.addEventListener('blur', function () { mFocus = false; mBox.classList.remove('is-focus'); });
   var mx = 0, dir = 1, velocity = 0;
 
   /* ---------- Cursor de color + vista previa ---------- */
@@ -132,13 +145,17 @@
   var intro = $('.panel--intro');
   function placeIntro() {
     if (!intro || !htrack) return;
-    if (!isDesktop()) { if (intro.parentNode === htrack) htrack.parentNode.insertBefore(intro, htrack); }
+    var carousel = !isDesktop() || reduce;
+    hscroll.classList.toggle('is-carousel', carousel);
+    if (carousel) { htrack.setAttribute('tabindex', '0'); htrack.setAttribute('role', 'region'); }
+    else { htrack.removeAttribute('tabindex'); htrack.removeAttribute('role'); }
+    if (carousel) { if (intro.parentNode === htrack) htrack.parentNode.insertBefore(intro, htrack); }
     else if (intro.parentNode !== htrack) { htrack.insertBefore(intro, htrack.firstChild); }
   }
   placeIntro();
   window.addEventListener('resize', placeIntro);
   if (htrack) htrack.addEventListener('scroll', function () {
-    if (isDesktop()) return;
+    if (!hscroll.classList.contains('is-carousel')) return;
     var m = htrack.scrollWidth - htrack.clientWidth;
     hbar.style.transform = 'scaleX(' + (m > 0 ? Math.max(.12, htrack.scrollLeft / m) : 1) + ')';
   }, { passive: true });
@@ -156,7 +173,7 @@
       // Cinta: velocidad base + empuje del scroll, cambia de sentido
       if (delta !== 0) dir = delta > 0 ? 1 : -1;
       velocity = lerp(velocity, Math.abs(delta) * 0.6, 0.1);
-      mx -= (0.6 + velocity) * dir;
+      if (!mPaused && !mFocus) mx -= (0.6 + velocity) * dir;
       var half = marquee.scrollWidth / 2;
       if (mx <= -half) mx += half;
       if (mx > 0) mx -= half;

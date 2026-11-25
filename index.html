@@ -40,7 +40,7 @@
 <div class="cursor" id="cursor" aria-hidden="true"></div>
 
 <header class="header">
-  <a class="brand" href="#inicio" aria-label="Magdalena Alonso, inicio"><span class="brand__m">M</span><span class="brand__a">A</span></a>
+  <a class="brand" href="#inicio" aria-label="MA, Magdalena Alonso. Ir al inicio"><span class="brand__m">M</span><span class="brand__a">A</span></a>
   <nav class="nav" id="nav" aria-label="Secciones">
     <ul>
       <li><a href="#enfoque">Enfoque</a></li>
@@ -53,13 +53,22 @@
   <button class="menu-btn" id="menuOpen" type="button" aria-expanded="false" aria-controls="overlay">Menú</button>
 </header>
 
-<div class="overlay" id="overlay" aria-hidden="true">
-  <button type="button" id="menuClose">Cerrar</button>
-  <a href="#enfoque">Enfoque</a>
-  <a href="#casos">Casos</a>
-  <a href="#otros">Otros proyectos</a>
-  <a href="#trayectoria">Trayectoria</a>
-  <a href="#hablemos">Hablemos</a>
+<div class="overlay" id="overlay" aria-hidden="true" inert>
+  <div class="overlay__head">
+    <a class="brand" href="#inicio" aria-label="MA, Magdalena Alonso. Ir al inicio"><span class="brand__m">M</span><span class="brand__a">A</span></a>
+    <button type="button" id="menuClose">Cerrar</button>
+  </div>
+  <nav class="overlay__list" aria-label="Secciones">
+    <a href="#enfoque"><span class="n">01</span><span class="t">Enfoque</span></a>
+    <a href="#casos"><span class="n">02</span><span class="t">Casos</span></a>
+    <a href="#otros"><span class="n">03</span><span class="t">Otros proyectos</span></a>
+    <a href="#trayectoria"><span class="n">04</span><span class="t">Trayectoria</span></a>
+    <a href="#hablemos"><span class="n">05</span><span class="t">Hablemos</span></a>
+  </nav>
+  <div class="overlay__foot">
+    <a href="mailto:magui.alonso.g@gmail.com">magui.alonso.g@gmail.com</a>
+    <a href="https://www.linkedin.com/in/magdalenaalonso/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+  </div>
 </div>
 
 <main id="main">
@@ -78,14 +87,15 @@
     <p class="small">Diseño productos digitales de punta a punta, desde el relevamiento de necesidades con las áreas de negocio hasta la definición de interfaces. Actualmente formo parte de <strong>Raona</strong>, asignada a un proyecto para una empresa líder del sector energético.</p>
     <div class="links">
       <a class="link" href="#casos">Ver casos →</a>
-      <a class="link" href="https://www.linkedin.com/in/magdalenaalonso/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="link" href="https://www.linkedin.com/in/magdalenaalonso/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
     </div>
   </div>
 </section>
 
 <!-- Cinta cinética: se acelera y cambia de sentido con el scroll -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee__track" id="marquee">
+<div class="marquee" id="marqueeBox">
+  <button type="button" class="marquee__state" id="marqueeBtn" aria-pressed="false" aria-label="Pausar la cinta animada"><span aria-hidden="true">❚❚</span></button>
+  <div class="marquee__track" id="marquee" aria-hidden="true">
     <span>Relevamiento <i style="background:var(--yellow)"></i></span>
     <span class="o">UX/UI <i style="background:var(--green)"></i></span>
     <span>Accesibilidad <i style="background:var(--pink)"></i></span>
@@ -99,7 +109,7 @@
 <section id="enfoque" aria-labelledby="t-enfoque">
   <div class="hscroll" id="hscroll">
     <div class="hscroll__pin">
-      <div class="hscroll__track" id="htrack">
+      <div class="hscroll__track" id="htrack" aria-label="Pasos del enfoque de trabajo">
         <div class="panel panel--intro">
           <div>
             <span class="kicker">02 — Cómo trabajo</span>
@@ -364,13 +374,13 @@
   <div class="list">
     <a class="item" href="https://caromontalto.com/" data-desktop="caro-montalto-desktop.jpg" data-mobile="caro-montalto-mobile.jpg" target="_blank" rel="noopener" style="--c:var(--yellow);--top:#0d1d12" data-color="var(--yellow)">
       <span class="item__shot" aria-hidden="true"><span class="item__stage"><span class="item__bg"></span><span class="mk-laptop"><span class="mk-laptop__lid"><span class="mk-screen"><img src="caro-montalto-desktop.jpg" alt="" loading="lazy"></span></span><span class="mk-laptop__base"></span></span><span class="mk-phone"><span class="mk-screen"><img src="caro-montalto-mobile.jpg" alt="" loading="lazy"></span></span></span></span><span class="item__n">01</span><span class="item__name">Caro Montalto</span><span class="item__type">Sitio web · Diseño y desarrollo</span><span class="item__arrow" aria-hidden="true">↗</span>
-    </a>
+    <span class="sr-only"> (se abre en una pestaña nueva)</span></a>
     <a class="item" href="https://magui-alonso.github.io/pagina-flor/index.html" data-desktop="la-psico-exploradora-desktop.jpg" data-mobile="la-psico-exploradora-mobile.jpg" target="_blank" rel="noopener" style="--c:var(--red);--top:#0c0e1a" data-color="var(--red)">
       <span class="item__shot" aria-hidden="true"><span class="item__stage"><span class="item__bg"></span><span class="mk-laptop"><span class="mk-laptop__lid"><span class="mk-screen"><img src="la-psico-exploradora-desktop.jpg" alt="" loading="lazy"></span></span><span class="mk-laptop__base"></span></span><span class="mk-phone"><span class="mk-screen"><img src="la-psico-exploradora-mobile.jpg" alt="" loading="lazy"></span></span></span></span><span class="item__n">02</span><span class="item__name">La Psico Exploradora</span><span class="item__type">Sitio web · Diseño y desarrollo</span><span class="item__arrow" aria-hidden="true">↗</span>
-    </a>
+    <span class="sr-only"> (se abre en una pestaña nueva)</span></a>
     <a class="item" href="https://www.magdaenciso.life/" data-desktop="magda-enciso-desktop.jpg" data-mobile="magda-enciso-mobile.jpg" target="_blank" rel="noopener" style="--c:var(--green);--top:#faf9f9" data-color="var(--green)">
       <span class="item__shot" aria-hidden="true"><span class="item__stage"><span class="item__bg"></span><span class="mk-laptop"><span class="mk-laptop__lid"><span class="mk-screen"><img src="magda-enciso-desktop.jpg" alt="" loading="lazy"></span></span><span class="mk-laptop__base"></span></span><span class="mk-phone"><span class="mk-screen"><img src="magda-enciso-mobile.jpg" alt="" loading="lazy"></span></span></span></span><span class="item__n">03</span><span class="item__name">Magda Enciso</span><span class="item__type">Sitio web · Diseño y desarrollo</span><span class="item__arrow" aria-hidden="true">↗</span>
-    </a>
+    <span class="sr-only"> (se abre en una pestaña nueva)</span></a>
   </div>
   <div class="list__bar" aria-hidden="true"><i id="lbar"></i></div>
   <p class="preview-note">Pasá el mouse por cada proyecto para ver una vista previa del sitio.</p>
@@ -404,7 +414,7 @@
     <h3 class="label">Experiencia</h3>
     <ol>
       <li class="xp-row reveal">
-        <span class="xp-row__when">2022 — Hoy<i aria-label="Actual"></i></span>
+        <span class="xp-row__when">2022 — Hoy<i aria-hidden="true"></i><span class="sr-only"> (actual)</span></span>
         <div class="xp-row__role"><h4>Diseñadora UX/UI</h4><p>Raona</p></div>
         <div class="xp-row__desc">
           <p class="small">Asignada a un proyecto para una empresa líder del sector energético, participo en el diseño y evolución de productos digitales, trabajando en conjunto con las áreas de negocio para relevar necesidades, analizar requerimientos y transformarlos en soluciones centradas en las personas.</p>
@@ -462,7 +472,7 @@
       <a class="mail" id="email" href="mailto:magui.alonso.g@gmail.com">magui.alonso.g@gmail.com</a>
       <div class="actions">
         <span class="magnetic"><button class="btn-text" id="copyBtn" type="button">Copiar email</button></span>
-        <span class="magnetic"><a class="link" href="https://www.linkedin.com/in/magdalenaalonso/" target="_blank" rel="noopener">LinkedIn ↗</a></span>
+        <span class="magnetic"><a class="link" href="https://www.linkedin.com/in/magdalenaalonso/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (se abre en una pestaña nueva)</span></a></span>
       </div>
       <p class="status" id="copyStatus" role="status" aria-live="polite"></p>
     </div>

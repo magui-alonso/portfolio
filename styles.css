@@ -943,3 +943,59 @@ html { scroll-padding-top: 76px; }
 .brand { top: 2.5px; }
 @media (max-width: 900px) { .brand { top: 1px; } }
 @media (max-width: 900px) { .brand { top: 2px; } }
+
+/* Menú mobile claro: títulos en una línea y resaltado amarillo en la sección activa */
+.overlay { background: var(--bg); color: var(--ink); display: flex; flex-direction: column; padding: 0; }
+.overlay__head { display: flex; justify-content: space-between; align-items: center; height: 68px; padding: 0 var(--pad); border-bottom: 1px solid var(--line); flex-shrink: 0; }
+.overlay .overlay__head .brand { display: inline-block; font-family: var(--display); font-size: 32px; line-height: 1; padding: 0; }
+.overlay button { position: static; color: var(--ink); }
+.overlay__list { padding: 32px var(--pad) 24px; display: grid; gap: 4px; }
+.overlay .overlay__list a { display: flex; align-items: baseline; gap: 14px; font-family: var(--display); font-size: clamp(30px, 9.6vw, 48px); line-height: 1.1; padding: 6px 0; white-space: nowrap; }
+.overlay__list .n { font: 500 10px var(--body); letter-spacing: .1em; color: var(--soft); min-width: 18px; }
+.overlay__list .t { position: relative; z-index: 0; }
+.overlay__list a.is-active .t::before { content: ""; position: absolute; left: -2%; right: -2%; top: 30%; height: 56%; background: var(--yellow); border-radius: 1px; z-index: -1; }
+.overlay__foot { margin: auto var(--pad) 32px; padding-top: 14px; border-top: 1px solid var(--ink); display: flex; justify-content: space-between; gap: 12px; }
+.overlay .overlay__foot a { font: 400 12px var(--body); color: var(--grey); padding: 0; }
+.overlay { z-index: 130; }
+
+/* Al tocar: sin el celeste del navegador, con el resaltado amarillo del sitio */
+a, button { -webkit-tap-highlight-color: transparent; }
+.overlay__list a:active .t::before, .overlay__list a:focus-visible .t::before { content: ""; position: absolute; left: -2%; right: -2%; top: 30%; height: 56%; background: var(--yellow); border-radius: 1px; z-index: -1; }
+.overlay__list a:focus { outline: none; }
+.overlay__list a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+/* ===== Accesibilidad (revisión WCAG 2.2 AA) ===== */
+/* Gris de textos secundarios con contraste AA (5:1 sobre el fondo) */
+:root { --soft: #6E6E6A; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* Enfoque como carrusel también en desktop si la persona pidió reducir el movimiento */
+.hscroll.is-carousel { height: auto; }
+.hscroll.is-carousel .hscroll__pin { position: static; height: auto; overflow: visible; display: block; }
+.hscroll.is-carousel .panel--intro { width: auto; padding: 0 var(--pad) 28px; }
+.hscroll.is-carousel .hscroll__track { flex-direction: row; align-items: stretch; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: var(--pad); gap: 16px; padding: 2px var(--pad) 6px; transform: none !important; }
+.hscroll.is-carousel .hscroll__track > .panel { flex: 0 0 auto; margin: 0; scroll-snap-align: start; }
+.hscroll.is-carousel .hscroll__bar { display: block; position: relative; left: auto; right: auto; bottom: auto; margin: 20px var(--pad) 0; }
+.hscroll__track:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; }
+/* Sin desbordes horizontales en pantallas de 320px (reflow) */
+.sec__head > *, .tray-open > *, .hero > * { min-width: 0; }
+@media (max-width: 380px) {
+  .sec__head .title h2, .tray-open h2 { font-size: clamp(40px, 14vw, 64px); }
+  .hero__name { letter-spacing: .2em; }
+}
+
+/* Cinta: se pausa con clic/tap o con foco (WCAG 2.2.2) */
+.marquee { position: relative; cursor: pointer; }
+.marquee:focus-visible { outline: 2px solid var(--ink); outline-offset: -4px; }
+.marquee__state { position: absolute; right: var(--pad); top: 50%; transform: translateY(-50%); z-index: 2; font: 500 10.5px var(--body); letter-spacing: .14em; text-transform: uppercase; background: var(--ink); color: #fff; padding: 6px 10px; border-radius: 2px; opacity: 0; pointer-events: none; transition: opacity .2s; }
+.marquee.is-paused .marquee__state, .marquee:focus-visible .marquee__state { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .marquee { cursor: default; } }
+
+.marquee__state { border: 0; cursor: pointer; pointer-events: auto; min-height: 24px; }
+.marquee.is-paused .marquee__state, .marquee.is-focus .marquee__state, .marquee:hover .marquee__state { opacity: 1; }
+.marquee__state:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
+@media (hover: none) { .marquee__state { opacity: 1; } }
+
+/* Botón de pausa: solo ícono */
+.marquee__state { width: 30px; height: 30px; min-height: 0; padding: 0; display: grid; place-items: center; font-size: 11px; letter-spacing: 1px; line-height: 1; }
+.marquee__state { box-shadow: 0 0 0 3px var(--paper, #fff), 0 4px 12px -4px rgba(0,0,0,.35); }
+@media (max-width: 900px) { #enfoque .hscroll { margin-top: 80px; } }
