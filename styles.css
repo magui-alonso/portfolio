@@ -999,3 +999,11 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .marquee__state { width: 30px; height: 30px; min-height: 0; padding: 0; display: grid; place-items: center; font-size: 11px; letter-spacing: 1px; line-height: 1; }
 .marquee__state { box-shadow: 0 0 0 3px var(--paper, #fff), 0 4px 12px -4px rgba(0,0,0,.35); }
 @media (max-width: 900px) { #enfoque .hscroll { margin-top: 80px; } }
+
+/* Casos en mobile: misma composición que en desktop, escalada (sin elementos encimados) */
+@media (max-width: 900px) {
+  .card__media { aspect-ratio: 1 / 1; }
+  .card__media .pc { inset: auto; left: 0; top: 0; width: 620px; height: 620px; transform: scale(var(--k, .55)); transform-origin: 0 0; }
+}
+@media (max-width: 900px) { .card__media { aspect-ratio: 660 / 680; } .card__media .pc { width: 660px; height: 680px; } }
+@media (max-width: 900px) { .card__media .pc { left: calc((100% - 660px * var(--k, .5)) / 2); top: calc((100% - 680px * var(--k, .5)) / 2); } }

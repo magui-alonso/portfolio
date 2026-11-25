@@ -97,9 +97,9 @@
     mBox.classList.toggle('is-paused', v);
   }
   setPaused(false);
-  mBox.addEventListener('click', function (e) { if (e.target !== mBtn) setPaused(!mPaused); });
-  mBtn.addEventListener('click', function () { setPaused(!mPaused); });
-  mBtn.addEventListener('focus', function () { mFocus = true; mBox.classList.add('is-focus'); });
+  mBox.addEventListener('click', function (e) { if (!e.target.closest('#marqueeBtn')) setPaused(!mPaused); });
+  mBtn.addEventListener('click', function (e) { e.stopPropagation(); setPaused(!mPaused); });
+  mBtn.addEventListener('focus', function () { var kb = true; try { kb = mBtn.matches(':focus-visible'); } catch (err) {} if (kb) { mFocus = true; mBox.classList.add('is-focus'); } });
   mBtn.addEventListener('blur', function () { mFocus = false; mBox.classList.remove('is-focus'); });
   var mx = 0, dir = 1, velocity = 0;
 
@@ -136,6 +136,9 @@
   var plist = $('#otros .list'), lbar = $('#lbar');
   function fitShots() { $$('.item__shot').forEach(function (el) { if (el.clientWidth) el.style.setProperty('--k', el.clientWidth / 440); }); }
   fitShots(); window.addEventListener('resize', fitShots); window.addEventListener('load', fitShots);
+  // Casos en mobile: la ilustración se arma al tamaño de desktop (620px) y se escala para entrar
+  function fitCases() { $$('.card__media').forEach(function (m) { if (m.clientWidth) m.style.setProperty('--k', Math.min(1, m.clientWidth / 700)); }); }
+  fitCases(); window.addEventListener('resize', fitCases); window.addEventListener('load', fitCases);
   if (plist && lbar) plist.addEventListener('scroll', function () {
     var m = plist.scrollWidth - plist.clientWidth;
     lbar.style.transform = 'scaleX(' + (m > 0 ? Math.max(.12, plist.scrollLeft / m) : 1) + ')';
