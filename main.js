@@ -98,7 +98,7 @@
     window.addEventListener('mousemove', function (e) { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
     /* El cursor se mantiene siempre como un cuadradito chico */
     $$('.item').forEach(function (el) {
-      el.addEventListener('mouseenter', function () { preview.style.setProperty('--c', el.dataset.color); if (el.dataset.desktop) { $('#pvDesk').src = el.dataset.desktop; $('#pvMob').src = el.dataset.mobile; } preview.classList.add('is-on'); });
+      el.addEventListener('mouseenter', function () { preview.style.setProperty('--c', el.dataset.color); preview.style.setProperty('--top', el.style.getPropertyValue('--top')); if (el.dataset.desktop) { $('#pvDesk').src = el.dataset.desktop; $('#pvMob').src = el.dataset.mobile; } preview.classList.add('is-on'); });
       el.addEventListener('mouseleave', function () { preview.classList.remove('is-on'); });
     });
     /* Botones "magnéticos" */
@@ -118,6 +118,30 @@
   var progress = $('#progress');
   var hscroll = $('#hscroll'), htrack = $('#htrack'), hbar = $('#hbar');
   var cards = $$('.card');
+
+  /* ---------- Otros proyectos en mobile: carrusel ---------- */
+  var plist = $('#otros .list'), lbar = $('#lbar');
+  function fitShots() { $$('.item__shot').forEach(function (el) { if (el.clientWidth) el.style.setProperty('--k', el.clientWidth / 440); }); }
+  fitShots(); window.addEventListener('resize', fitShots); window.addEventListener('load', fitShots);
+  if (plist && lbar) plist.addEventListener('scroll', function () {
+    var m = plist.scrollWidth - plist.clientWidth;
+    lbar.style.transform = 'scaleX(' + (m > 0 ? Math.max(.12, plist.scrollLeft / m) : 1) + ')';
+  }, { passive: true });
+
+  /* ---------- Enfoque en mobile: carrusel deslizable ---------- */
+  var intro = $('.panel--intro');
+  function placeIntro() {
+    if (!intro || !htrack) return;
+    if (!isDesktop()) { if (intro.parentNode === htrack) htrack.parentNode.insertBefore(intro, htrack); }
+    else if (intro.parentNode !== htrack) { htrack.insertBefore(intro, htrack.firstChild); }
+  }
+  placeIntro();
+  window.addEventListener('resize', placeIntro);
+  if (htrack) htrack.addEventListener('scroll', function () {
+    if (isDesktop()) return;
+    var m = htrack.scrollWidth - htrack.clientWidth;
+    hbar.style.transform = 'scaleX(' + (m > 0 ? Math.max(.12, htrack.scrollLeft / m) : 1) + ')';
+  }, { passive: true });
   var lastY = window.scrollY;
 
   function onFrame() {
