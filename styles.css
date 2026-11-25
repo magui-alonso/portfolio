@@ -1007,3 +1007,11 @@ a, button { -webkit-tap-highlight-color: transparent; }
 }
 @media (max-width: 900px) { .card__media { aspect-ratio: 660 / 680; } .card__media .pc { width: 660px; height: 680px; } }
 @media (max-width: 900px) { .card__media .pc { left: calc((100% - 660px * var(--k, .5)) / 2); top: calc((100% - 680px * var(--k, .5)) / 2); } }
+
+/* Texto que se completa palabra por palabra: el estado inicial también cumple contraste AA (4.9:1) */
+.fill .w { opacity: 1; color: var(--soft); transition: color .25s linear; }
+.fill .w.on { color: var(--ink); }
+
+/* Enfoque (desktop): el bloque de color baja hasta la mitad del número */
+.hscroll:not(.is-carousel) .panel .block { height: auto; bottom: calc(44px + 0.39 * clamp(88px, 11vw, 170px)); }
+
